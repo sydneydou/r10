@@ -1,14 +1,7 @@
 import React, {Fragment} from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  StatusBar,
-} from 'react-native';
+import {SafeAreaView, StyleSheet, StatusBar} from 'react-native';
 import client from './config/api';
-import About from './screens/About';
+import RootStackNavigator from './navigation/RootStackNavigator';
 
 import {ApolloProvider} from '@apollo/react-hooks';
 
@@ -17,9 +10,8 @@ const App = () => {
     <ApolloProvider client={client}>
       <Fragment>
         <StatusBar barStyle="dark-content" />
-        <SafeAreaView>
-          <About />
-        </SafeAreaView>
+
+        <RootStackNavigator />
       </Fragment>
     </ApolloProvider>
   );
