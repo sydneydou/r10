@@ -13,7 +13,7 @@ class SessionContainer extends Component {
 
   render() {
     const {navigation} = this.props;
-    const session = navigation.getParam('session', {});
+    const session = navigation.getParam('item', {});
     console.log(session);
     return (
       <View>

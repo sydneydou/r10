@@ -14,27 +14,27 @@ const ListSession = ({sessions, navigation}) => {
   console.log(sessions);
   return (
     sessions && (
-      <TouchableHighlight
-        onPress={() => navigation.navigate('Session', {session: {sessions}})}>
-        <SectionList
-          renderItem={({item}) => (
+      <SectionList
+        renderItem={({item}) => (
+          <TouchableHighlight
+            onPress={() => navigation.navigate('Session', {item})}>
             <View style={styles.sessionContainer}>
               <Text style={styles.sessionTitle}>{item.title}</Text>
               <Text style={styles.sessionLocation}>{item.location}</Text>
             </View>
-          )}
-          renderSectionHeader={({section: {title}}) => (
-            <Text style={styles.sessionTime}>
-              {new Date(title).toLocaleTimeString([], {
-                hour: '2-digit',
-                minute: '2-digit',
-              })}
-            </Text>
-          )}
-          sections={sessions}
-          // keyExtractor={(item, index) => item + index}
-        />
-      </TouchableHighlight>
+          </TouchableHighlight>
+        )}
+        renderSectionHeader={({section: {title}}) => (
+          <Text style={styles.sessionTime}>
+            {new Date(title).toLocaleTimeString([], {
+              hour: '2-digit',
+              minute: '2-digit',
+            })}
+          </Text>
+        )}
+        sections={sessions}
+        // keyExtractor={(item, index) => item + index}
+      />
     )
   );
 };
