@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import {View, Text} from 'react-native';
 import Schedule from './Schedule';
+import {gql} from 'apollo-boost';
+import {Query} from '@apollo/react-components';
 
 class ScheduleContainer extends Component {
   constructor(props) {
@@ -12,9 +14,24 @@ class ScheduleContainer extends Component {
   };
   render() {
     return (
-      <View>
-        <Schedule />
-      </View>
+      <Query
+        query={gql`
+          {
+            allSessions {
+              id
+              location
+              startTime
+              title
+            }
+          }
+        `}>
+        {({loading, error, data}) => {
+          if (loading) return <Text>Loading...</Text>;
+          if (error) return <Text>Error :(</Text>;
+
+          if (data) return <Schedule allSessions={data.allSessions} />;
+        }}
+      </Query>
     );
   }
 }
