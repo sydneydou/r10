@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {Text, View,Button} from 'react-native';
 import styles from './styles';
 
 const SingleSession = ({singleSession}) => {
@@ -21,8 +21,7 @@ const SingleSession = ({singleSession}) => {
       </View>
 
 
-
-      {/* <Button>Add to Faves</Button> */}
+        {/* <Button title="Add to Faves" onPress={}/> */}
     </View>
   );
 };
