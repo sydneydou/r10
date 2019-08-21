@@ -15,7 +15,10 @@ const SingleSession = ({sessions}) => {
         renderItem={({item}) => <Text>{item.title}</Text>}
         renderSectionHeader={({section: {title}}) => (
           <Text style={{fontWeight: 'bold'}}>
-            {new Date(title).toLocaleTimeString('en-US')}
+            {new Date(title).toLocaleTimeString([], {
+              hour: '2-digit',
+              minute: '2-digit',
+            })}
           </Text>
         )}
         sections={sessions}
