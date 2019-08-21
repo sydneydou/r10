@@ -22,6 +22,13 @@ class ScheduleContainer extends Component {
               location
               startTime
               title
+              speaker {
+                id
+                bio
+                image
+                name
+                url
+              }
             }
           }
         `}>

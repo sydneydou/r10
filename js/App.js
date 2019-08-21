@@ -2,18 +2,20 @@ import React, {Fragment} from 'react';
 import {SafeAreaView, StyleSheet, StatusBar} from 'react-native';
 import client from './config/api';
 import RootStackNavigator from './navigation/RootStackNavigator';
-
+import {FavesProvider} from './context/FavesContext';
 import {ApolloProvider} from '@apollo/react-hooks';
 
 const App = () => {
   return (
-    <ApolloProvider client={client}>
-      <Fragment>
-        <StatusBar barStyle="dark-content" />
+    <FavesProvider>
+      <ApolloProvider client={client}>
+        <Fragment>
+          <StatusBar barStyle="dark-content" />
 
-        <RootStackNavigator />
-      </Fragment>
-    </ApolloProvider>
+          <RootStackNavigator />
+        </Fragment>
+      </ApolloProvider>
+    </FavesProvider>
   );
 };
 

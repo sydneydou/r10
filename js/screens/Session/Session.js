@@ -1,10 +1,14 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {Text, View, Button} from 'react-native';
 
-const Session = ({params}) => (
-  <View>
-    <Text>Session</Text>
-  </View>
-);
+const Session = ({singleSession}) => {
+  console.log(singleSession);
+  return (
+    <View>
+      <Text>Session</Text>
+      {/* <Button>Add to Faves</Button> */}
+    </View>
+  );
+};
 
 export default Session;

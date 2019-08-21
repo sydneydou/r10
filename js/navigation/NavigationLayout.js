@@ -10,7 +10,7 @@ import {sharedNavigationOptions} from './config';
 
 const AboutStack = createStackNavigator(
   {
-    About: AboutScreen,
+    About: {screen: AboutScreen},
   },
   {
     defaultNavigationOptions: ({navigation}) => ({
@@ -20,7 +20,7 @@ const AboutStack = createStackNavigator(
 );
 const MapStack = createStackNavigator(
   {
-    Map: MapScreen,
+    Map: {screen: MapScreen},
   },
   {
     defaultNavigationOptions: ({navigation}) => ({
@@ -31,7 +31,9 @@ const MapStack = createStackNavigator(
 const ScheduleStack = createStackNavigator(
   {
     Schedule: ScheduleScreen,
+    Session: SessionScreen,
   },
+
   {
     defaultNavigationOptions: ({navigation}) => ({
       ...sharedNavigationOptions(navigation),
@@ -40,7 +42,8 @@ const ScheduleStack = createStackNavigator(
 );
 const FavesStack = createStackNavigator(
   {
-    Faves: FavesScreen,
+    Faves: {screen: FavesScreen},
+    Session: {screen: SessionScreen},
   },
   {
     defaultNavigationOptions: ({navigation}) => ({

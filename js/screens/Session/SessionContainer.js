@@ -7,11 +7,17 @@ class SessionContainer extends Component {
     super(props);
     this.state = {};
   }
+  static navigationOptions = {
+    title: 'Session',
+  };
 
   render() {
+    const {navigation} = this.props;
+    const session = navigation.getParam('session', {});
+    console.log(session);
     return (
       <View>
-        <Session />
+        <Session singleSession={session} />
       </View>
     );
   }
