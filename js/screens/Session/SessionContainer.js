@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {View, Text} from 'react-native';
 import Session from './Session';
+import FavesContext from '../../context/FavesContext';
 
 class SessionContainer extends Component {
   constructor(props) {
@@ -16,7 +17,16 @@ class SessionContainer extends Component {
     const session = navigation.getParam('item', {});
     return (
       <View>
-        <Session singleSession={session} />
+        <FavesContext.Consumer>
+          {context => (
+            <Session
+              singleSession={session}
+              removeFave={context.removeFaveSession}
+              addFave={context.addFaveSession}
+              getFaves={context.getFavedSessionIds}
+            />
+          )}
+        </FavesContext.Consumer>
       </View>
     );
   }

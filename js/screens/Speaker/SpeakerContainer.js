@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {View, Text} from 'react-native';
 import Speaker from './Speaker';
+import FavesContext from '../../context/FavesContext';
 
 class SpeakerContainer extends Component {
   constructor(props) {
@@ -9,10 +10,21 @@ class SpeakerContainer extends Component {
   }
 
   render() {
+    const {navigation} = this.props;
+
+    const speaker = navigation.getParam({'name ': '', bio: ''});
+    console.log(speaker);
     return (
-      <View>
-        <Speaker />
-      </View>
+      <FavesContext.Consumer>
+        {context => (
+          <View>
+            <Speaker
+              removeFave={context.removeFaveSession}
+              addFave={context.addFaveSession}
+            />
+          </View>
+        )}
+      </FavesContext.Consumer>
     );
   }
 }

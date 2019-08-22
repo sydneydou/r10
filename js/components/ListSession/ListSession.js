@@ -9,8 +9,7 @@ import {
 import styles from './styles';
 import {withNavigation} from 'react-navigation';
 
-const ListSession = ({sessions, navigation}) => {
-  //const {navigate} = this.props.navigation;
+const ListSession = ({sessions, navigation, addFave, removeFave}) => {
   console.log(sessions);
   return (
     sessions && (

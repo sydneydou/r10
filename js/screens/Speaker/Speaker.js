@@ -1,11 +1,11 @@
 import React from 'react';
-import {Text, View,Modal,Button} from 'react-native';
-import SpeakerComponent from '.././../components/SpeakerComponent'
+import {Text, View, Modal, Button} from 'react-native';
+import SpeakerComponent from '.././../components/SpeakerComponent';
 
-const Speaker = ({params}) => (
+const Speaker = ({addFave, removeFave}) => (
   <View>
     {/* <Button title='exit' onPress={}/> */}
-    <SpeakerComponent />
+    <SpeakerComponent addFave={addFave} removeFave={removeFave} />
   </View>
 );
 

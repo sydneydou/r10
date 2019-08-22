@@ -5,7 +5,8 @@
   "scripts": {
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "emulator": "cd ~/Library/Android/sdk/tools && ./emulator -avd Pixel_2_API_28_1"
   },
   "dependencies": {
     "@apollo/react-components": "^3.0.1",
