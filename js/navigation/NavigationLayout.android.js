@@ -63,18 +63,18 @@ export default createDrawerNavigator(
   },
   {
     defaultNavigationOptions: ({navigation}) => ({
-      tabBarIcon: ({focused, horizontal, tintColor}) => {
+      drawerIcon: ({focused, horizontal, tintColor}) => {
         const {routeName} = navigation.state;
         let IconComponent = Ionicons;
         let iconName;
         if (routeName === 'Schedule') {
-          iconName = `ios-calendar`;
+          iconName = `md-calendar`;
         } else if (routeName === 'Map') {
-          iconName = `ios-map`;
+          iconName = `md-map`;
         } else if (routeName === 'Faves') {
-          iconName = `ios-heart`;
+          iconName = `md-heart`;
         } else if (routeName === 'About') {
-          iconName = `ios-information-circle`;
+          iconName = `md-information-circle`;
         }
 
         return <IconComponent name={iconName} size={25} color={tintColor} />;

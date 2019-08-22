@@ -1,6 +1,6 @@
 import {createAppContainer, createStackNavigator} from 'react-navigation';
 import SpeakerModal from '../screens/Speaker';
-import NavigationLayout from './NavigationLayout.ios';
+import NavigationLayout from './NavigationLayout';
 
 export default createAppContainer(
   createStackNavigator(
