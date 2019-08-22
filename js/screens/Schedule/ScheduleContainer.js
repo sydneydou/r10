@@ -16,7 +16,7 @@ class ScheduleContainer extends Component {
   render() {
     return (
       <FavesContext.Consumer>
-        {context => (
+        {({faveIds, removeFaveSession}) => (
           <Query
             query={gql`
               {
@@ -43,8 +43,9 @@ class ScheduleContainer extends Component {
               if (data)
                 return (
                   <Schedule
-                    removeFave={context.removeFaveSession}
-                    addFave={context.addFaveSession}
+                    removeFave={removeFaveSession}
+                    faveIds={faveIds}
+                    //isFaved={faveIds.includes(session.id)}
                     allSessions={data.allSessions}
                   />
                 );

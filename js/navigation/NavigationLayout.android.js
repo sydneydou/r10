@@ -1,12 +1,12 @@
 import React from 'react';
-import {createStackNavigator, createBottomTabNavigator} from 'react-navigation';
+import {createStackNavigator, createDrawerNavigator} from 'react-navigation';
 import AboutScreen from '../screens/About';
 import FavesScreen from '../screens/Faves';
 import ScheduleScreen from '../screens/Schedule';
 import MapScreen from '../screens/Map';
 import SessionScreen from '../screens/Session';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import SpeakerScreen from '../screens/Speaker'
+import SpeakerScreen from '../screens/Speaker';
 import {sharedNavigationOptions} from './config';
 
 const AboutStack = createStackNavigator(
@@ -33,8 +33,7 @@ const ScheduleStack = createStackNavigator(
   {
     Schedule: ScheduleScreen,
     Session: SessionScreen,
-    Speaker: SpeakerScreen
-    
+    Speaker: SpeakerScreen,
   },
 
   {
@@ -55,7 +54,7 @@ const FavesStack = createStackNavigator(
   },
 );
 
-export default createBottomTabNavigator(
+export default createDrawerNavigator(
   {
     Schedule: ScheduleStack,
     Map: MapStack,

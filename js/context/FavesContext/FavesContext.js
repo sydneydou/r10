@@ -21,6 +21,7 @@ class FavesProvider extends Component {
       console.log('adding fave');
       const newFave = await createFave(sessionId);
       this.setState({faveIds: [...this.state.faveIds, newFave]});
+      this.getFavedSessionIds();
     } catch (error) {
       return error;
     }

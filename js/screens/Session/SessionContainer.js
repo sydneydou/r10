@@ -24,6 +24,7 @@ class SessionContainer extends Component {
               removeFave={removeFaveSession}
               addFave={addFaveSession}
               faveIds={faveIds}
+              isFaved={faveIds.includes(session.id)}
             />
           )}
         </FavesContext.Consumer>

@@ -5,7 +5,7 @@ import ListSession from '../../components/ListSession';
 import {withNavigation} from 'react-navigation';
 import styles from './styles';
 
-const Schedule = ({allSessions, navigation, addFave, removeFave}) => {
+const Schedule = ({allSessions, addFave, removeFave}) => {
   const filteredSession = formatSessionData(allSessions);
   return (
     <View style={styles.title}>
