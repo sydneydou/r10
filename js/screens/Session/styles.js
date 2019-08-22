@@ -35,6 +35,41 @@ const styles = StyleSheet.create({
     fontSize: 17,
     fontWeight: '500',
   },
+  speakerBlock: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    borderBottomColor: '#e6e6e6',
+    borderBottomWidth: 1,
+    paddingBottom: 25,
+  },
+  speakerImage: {
+    width: 70,
+    height: 70,
+    borderRadius: 50,
+    marginRight: 15,
+  },
+  faveButton: {
+    backgroundColor: '#9963ea',
+    width: 180,
+    borderColor: 'white',
+    borderRadius: 25,
+    paddingTop: 20,
+    textAlign: 'center',
+    marginTop: 30,
+    marginRight: 60,
+    marginLeft: 60,
+  },
+  faveBlock: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingRight: 20,
+  },
+  faveButtonText: {
+    color: 'white',
+    fontSize: 20,
+    textAlign: 'center',
+    paddingBottom: 10,
+  },
 });
 
 export default styles;

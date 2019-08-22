@@ -2,7 +2,7 @@ import React from 'react';
 import {
   Text,
   View,
-  Button,
+  TouchableOpacity,
   Image,
   TouchableHighlight,
   Platform,
@@ -11,7 +11,14 @@ import styles from './styles';
 import {withNavigation} from 'react-navigation';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
-const Session = ({singleSession, addFave, removeFave, faveIds, isFaved}) => {
+const Session = ({
+  singleSession,
+  addFave,
+  removeFave,
+  faveIds,
+  isFaved,
+  navigation,
+}) => {
   addNewFave = sessionId => {
     addFave(sessionId);
   };
@@ -29,42 +36,46 @@ const Session = ({singleSession, addFave, removeFave, faveIds, isFaved}) => {
 
   return (
     <View style={styles.sessionPage}>
-      <Text style={styles.sessionLocation}>{singleSession.location}</Text>
-      {isFaved ? (
-        <IconComponent
-          size={25}
-          color={'red'}
-          name={Platform.Os === 'ios' ? 'ios-heart' : 'md-heart'}
-        />
-      ) : null}
+      <View style={styles.faveBlock}>
+        <Text style={styles.sessionLocation}>{singleSession.location}</Text>
+        {isFaved ? (
+          <IconComponent
+            size={25}
+            color={'red'}
+            name={Platform.Os === 'ios' ? 'ios-heart' : 'md-heart'}
+          />
+        ) : null}
+      </View>
       <Text style={styles.sessionTitle}>{singleSession.title}</Text>
       <Text style={styles.sessionTime}>{time}</Text>
       <Text style={styles.sessionDescription}>{singleSession.description}</Text>
       <Text style={styles.sessionLocation}>Presented By:</Text>
       <TouchableHighlight
         onPress={() =>
-          navigation.push('Speaker', {
-            name: singleSession.name,
-            bio: singleSession.bio,
-          })
+          navigation.navigate('Speaker', {speaker: singleSession.speaker})
         }>
-        <View>
-          <Image style={{width: 50, height: 50}} source={{uri: {imageurl}}} />
+        <View style={styles.speakerBlock}>
+          <Image
+            style={styles.speakerImage}
+            source={{uri: singleSession.speaker.image}}
+          />
           <Text style={styles.sessionSpeakerName}>
             {singleSession.speaker.name}
           </Text>
         </View>
       </TouchableHighlight>
       {!isFaved ? (
-        <Button
-          title="Add to Faves"
+        <TouchableOpacity
           onPress={() => addNewFave(singleSession.id)}
-        />
+          style={styles.faveButton}>
+          <Text style={styles.faveButtonText}>Add to Faves</Text>
+        </TouchableOpacity>
       ) : (
-        <Button
-          title="Remove to Faves"
+        <TouchableOpacity
           onPress={() => removeNewFave(singleSession.id)}
-        />
+          style={styles.faveButton}>
+          <Text style={styles.faveButtonText}>Remove to Faves</Text>
+        </TouchableOpacity>
       )}
     </View>
   );

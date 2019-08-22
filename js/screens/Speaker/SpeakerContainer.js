@@ -12,19 +12,12 @@ class SpeakerContainer extends Component {
   render() {
     const {navigation} = this.props;
 
-    const speaker = navigation.getParam({'name ': '', bio: ''});
+    const speaker = navigation.getParam('speaker', {});
     console.log(speaker);
     return (
-      <FavesContext.Consumer>
-        {context => (
-          <View>
-            <Speaker
-              removeFave={context.removeFaveSession}
-              addFave={context.addFaveSession}
-            />
-          </View>
-        )}
-      </FavesContext.Consumer>
+      <View>
+        <Speaker speaker={speaker} />
+      </View>
     );
   }
 }

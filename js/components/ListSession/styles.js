@@ -14,6 +14,7 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     height: 82,
     justifyContent: 'space-evenly',
+    //flexDirection: 'row',
   },
   sessionTitle: {
     fontSize: 17,
@@ -21,6 +22,11 @@ const styles = StyleSheet.create({
   sessionLocation: {
     color: '#999999',
     fontSize: 15,
+  },
+  sessionList: {
+    justifyContent: 'space-between',
+    flexDirection: 'row',
+    paddingRight: 15,
   },
 });
 

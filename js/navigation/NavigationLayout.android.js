@@ -33,7 +33,6 @@ const ScheduleStack = createStackNavigator(
   {
     Schedule: ScheduleScreen,
     Session: SessionScreen,
-    Speaker: SpeakerScreen,
   },
 
   {

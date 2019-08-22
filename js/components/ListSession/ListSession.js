@@ -25,15 +25,18 @@ const ListSession = ({sessions, navigation, removeFave, isFaved, faveIds}) => {
             onPress={() => navigation.navigate('Session', {item})}>
             <View style={styles.sessionContainer}>
               <Text style={styles.sessionTitle}>{item.title}</Text>
-              <Text style={styles.sessionLocation}>{item.location}</Text>
-              {faveIds.includes(item.id) ? (
-                <IconComponent
-                  size={25}
-                  color={'red'}
-                  name={Platform.Os === 'ios' ? 'ios-heart' : 'md-heart'}
-                  onPress={() => removeNewFave(item.id)}
-                />
-              ) : null}
+              <View style={styles.sessionList}>
+                <Text style={styles.sessionLocation}>{item.location}</Text>
+
+                {faveIds.includes(item.id) ? (
+                  <IconComponent
+                    size={25}
+                    color={'red'}
+                    name={Platform.Os === 'ios' ? 'ios-heart' : 'md-heart'}
+                    onPress={() => removeNewFave(item.id)}
+                  />
+                ) : null}
+              </View>
             </View>
           </TouchableHighlight>
         )}
