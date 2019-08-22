@@ -8,29 +8,26 @@ const Speaker = ({navigation, speaker}) => {
   let IconComponent = Ionicons;
   return (
     <SafeAreaView>
-      <ScrollView>
-        <View>
-          {/* <Button title='exit' onPress={}/> */}
-          <View style={styles.speakerBackground}>
-            <TouchableOpacity>
-              <IconComponent
-                name="ios-close"
-                size={50}
-                style={styles.goBack}
-                onPress={() => navigation.goBack()}
-              />
-            </TouchableOpacity>
-            <Text style={styles.aboutSpeaker}>About the Speaker</Text>
-
-            <View style={styles.speakerBox}>
-              <Image
-                style={styles.speakerImage}
-                source={{uri: speaker.image}}
-              />
-            </View>
-          </View>
+      <View style={styles.speakerBackground}>
+        <View style={styles.speakerTop}>
+          <TouchableOpacity>
+            <IconComponent
+              name="ios-close"
+              size={50}
+              style={styles.goBack}
+              onPress={() => navigation.goBack()}
+            />
+          </TouchableOpacity>
+          <Text style={styles.aboutSpeaker}>About the Speaker</Text>
         </View>
-      </ScrollView>
+        <ScrollView>
+          <View style={styles.speakerBox}>
+            <Image style={styles.speakerImage} source={{uri: speaker.image}} />
+            <Text style={styles.speakerName}>{speaker.name}</Text>
+            <Text style={styles.speakerBio}>{speaker.bio}</Text>
+          </View>
+        </ScrollView>
+      </View>
     </SafeAreaView>
   );
 };
