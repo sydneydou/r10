@@ -18,12 +18,12 @@ class SessionContainer extends Component {
     return (
       <View>
         <FavesContext.Consumer>
-          {context => (
+          {({faveIds, addFaveSession, removeFaveSession}) => (
             <Session
               singleSession={session}
-              removeFave={context.removeFaveSession}
-              addFave={context.addFaveSession}
-              getFaves={context.getFavedSessionIds}
+              removeFave={removeFaveSession}
+              addFave={addFaveSession}
+              faveIds={faveIds}
             />
           )}
         </FavesContext.Consumer>
