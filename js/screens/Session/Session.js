@@ -14,13 +14,9 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 const Session = ({singleSession, addFave, removeFave, faveIds, isFaved}) => {
   addNewFave = sessionId => {
     addFave(sessionId);
-    console.log(isFaved);
-    //need prop to change to rerender
   };
   removeNewFave = sessionId => {
     removeFave(sessionId);
-    console.log(isFaved);
-    //need prop to change to rerender
   };
 
   const time = new Date(singleSession.startTime).toLocaleTimeString([], {

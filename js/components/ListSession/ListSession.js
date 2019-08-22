@@ -5,12 +5,18 @@ import {
   SectionList,
   View,
   TouchableHighlight,
+  Platform,
 } from 'react-native';
 import styles from './styles';
 import {withNavigation} from 'react-navigation';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
-const ListSession = ({sessions, navigation, addFave, removeFave}) => {
-  console.log(sessions);
+const ListSession = ({sessions, navigation, removeFave, isFaved, faveIds}) => {
+  let IconComponent = Ionicons;
+
+  removeNewFave = sessionId => {
+    removeFave(sessionId);
+  };
   return (
     sessions && (
       <SectionList
@@ -20,6 +26,14 @@ const ListSession = ({sessions, navigation, addFave, removeFave}) => {
             <View style={styles.sessionContainer}>
               <Text style={styles.sessionTitle}>{item.title}</Text>
               <Text style={styles.sessionLocation}>{item.location}</Text>
+              {faveIds.includes(item.id) ? (
+                <IconComponent
+                  size={25}
+                  color={'red'}
+                  name={Platform.Os === 'ios' ? 'ios-heart' : 'md-heart'}
+                  onPress={() => removeNewFave(item.id)}
+                />
+              ) : null}
             </View>
           </TouchableHighlight>
         )}
@@ -32,7 +46,6 @@ const ListSession = ({sessions, navigation, addFave, removeFave}) => {
           </Text>
         )}
         sections={sessions}
-        // keyExtractor={(item, index) => item + index}
       />
     )
   );

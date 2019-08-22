@@ -45,7 +45,6 @@ class ScheduleContainer extends Component {
                   <Schedule
                     removeFave={removeFaveSession}
                     faveIds={faveIds}
-                    //isFaved={faveIds.includes(session.id)}
                     allSessions={data.allSessions}
                   />
                 );
