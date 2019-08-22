@@ -1,8 +1,9 @@
 import React from 'react';
-import {Text, View,Button,Image} from 'react-native';
+import {Text, View,Button,Image,TouchableHighlight} from 'react-native';
 import styles from './styles';
+import {withNavigation} from 'react-navigation';
 
-const SingleSession = ({singleSession}) => {
+const SingleSession = ({singleSession,navigation}) => {
     const time = new Date(singleSession.startTime).toLocaleTimeString([], {
         hour: '2-digit',
         minute: '2-digit',
@@ -18,6 +19,8 @@ const SingleSession = ({singleSession}) => {
       <Text style={styles.sessionDescription}>{singleSession.description}</Text>
       
           <Text style={styles.sessionLocation}>Presented By:</Text>
+          <TouchableHighlight
+            onPress={() => navigation.push('Speaker', singleSession.speaker)}>
           <View> 
           <Image
           style={{width: 50, height: 50}}
@@ -25,6 +28,7 @@ const SingleSession = ({singleSession}) => {
         />
           <Text style={styles.sessionSpeakerName} >{singleSession.speaker.name}</Text>
       </View>
+      </TouchableHighlight>
 
 
         {/* <Button title="Add to Faves" onPress={}/> */}
@@ -32,4 +36,4 @@ const SingleSession = ({singleSession}) => {
   );
 };
 
-export default SingleSession;
+export default withNavigation(SingleSession);

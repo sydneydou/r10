@@ -1,9 +1,11 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {Text, View,Modal,Button} from 'react-native';
+import SpeakerComponent from '.././../components/SpeakerComponent'
 
 const Speaker = ({params}) => (
   <View>
-    <Text>Speaker</Text>
+    {/* <Button title='exit' onPress={}/> */}
+    <SpeakerComponent />
   </View>
 );
 
