@@ -14,6 +14,10 @@ class FavesContainer extends Component {
     title: 'Faves',
   };
 
+  ifFaves = data => {
+    data.allSessions.filter(session => faveIds.includes(session.id));
+  };
+
   render() {
     return (
       <View>
@@ -39,12 +43,6 @@ class FavesContainer extends Component {
                 }
               `}>
               {({loading, error, data}) => {
-                console.log(
-                  data.allSessions.filter(session =>
-                    faveIds.includes(session.id),
-                  ),
-                );
-
                 if (loading) return <Text>Loading...</Text>;
                 if (error) return <Text>Error :(</Text>;
 
