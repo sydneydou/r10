@@ -16,14 +16,15 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     height: 82,
     justifyContent: 'space-evenly',
-    //flexDirection: 'row',
   },
   sessionTitle: {
     fontSize: 17,
+    fontWeight: '600',
   },
   sessionLocation: {
     color: '#999999',
     fontSize: 15,
+    fontWeight: '600',
   },
   sessionList: {
     justifyContent: 'space-between',

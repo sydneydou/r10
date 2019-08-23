@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, View, Platform} from 'react-native';
+import {StyleSheet, View, Platform, TextStyle} from 'react-native';
 import {Header} from 'react-navigation';
 import LinearGradient from 'react-native-linear-gradient';
 import Icon from 'react-native-vector-icons/Ionicons';
@@ -12,7 +12,7 @@ const GradientHeader = props => (
       end={{x: 1.0, y: 0.0}}
       style={[StyleSheet.absoluteFill, {height: '100%', width: '100%'}]}
     />
-    <Header {...props} style={{color: 'white'}} />
+    <Header {...props} />
   </View>
 );
 
@@ -27,6 +27,10 @@ const MenuButton = ({navigation}) => (
 );
 export const sharedNavigationOptions = navigation => ({
   headerBackTitle: null,
+  headerTintColor: 'white',
+  headerTitleStyle: {
+    fontSize: 22,
+  },
   header: props => <GradientHeader {...props} />,
   headerStyle: {
     backgroundColor: 'transparent',
