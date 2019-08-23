@@ -6,10 +6,12 @@ import {
   Image,
   TouchableHighlight,
   Platform,
+  StyleSheet,
 } from 'react-native';
 import styles from './styles';
 import {withNavigation} from 'react-navigation';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import LinearGradient from 'react-native-linear-gradient';
 
 const Session = ({
   singleSession,
@@ -64,23 +66,27 @@ const Session = ({
           </Text>
         </View>
       </TouchableHighlight>
-      {!isFaved ? (
-        <View style={styles.faveButtonBlock}>
-          <TouchableOpacity
-            onPress={() => addNewFave(singleSession.id)}
+      <View style={styles.faveButtonBlock}>
+        <TouchableOpacity
+          onPress={() => {
+            !isFaved
+              ? addNewFave(singleSession.id)
+              : removeNewFave(singleSession.id);
+          }}
+          style={styles.faveButton}>
+          <LinearGradient
+            colors={['#9963ea', '#8797D6']}
+            start={{x: 0.0, y: 1.0}}
+            end={{x: 1.0, y: 0.0}}
             style={styles.faveButton}>
-            <Text style={styles.faveButtonText}>Add to Faves</Text>
-          </TouchableOpacity>
-        </View>
-      ) : (
-        <View style={styles.faveButtonBlock}>
-          <TouchableOpacity
-            onPress={() => removeNewFave(singleSession.id)}
-            style={styles.faveButton}>
-            <Text style={styles.faveButtonText}>Remove from Faves</Text>
-          </TouchableOpacity>
-        </View>
-      )}
+            {!isFaved ? (
+              <Text style={styles.faveButtonText}>Add to Faves</Text>
+            ) : (
+              <Text style={styles.faveButtonText}>Remove from Faves</Text>
+            )}
+          </LinearGradient>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 };

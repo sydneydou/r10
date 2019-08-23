@@ -56,6 +56,7 @@ const styles = StyleSheet.create({
     borderRadius: 25,
     height: 50,
     justifyContent: 'center',
+    alignContent: 'center',
   },
   faveButtonBlock: {
     textAlign: 'center',
@@ -73,7 +74,7 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: 20,
     textAlign: 'center',
-    paddingBottom: 10,
+    fontWeight: '500',
   },
 });
 

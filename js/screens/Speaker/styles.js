@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
   },
   readMoreButton: {
     backgroundColor: '#9963ea',
-    width: 230,
+    width: 240,
     borderColor: 'white',
     borderRadius: 25,
     height: 45,
@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: 20,
     textAlign: 'center',
-    paddingBottom: 10,
+    fontWeight: '500',
   },
 });
 
