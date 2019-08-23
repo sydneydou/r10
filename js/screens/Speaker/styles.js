@@ -31,9 +31,12 @@ const styles = StyleSheet.create({
   },
   speakerTop: {
     flexDirection: 'row',
+    paddingTop: 25,
+    paddingBottom: 20,
+    paddingLeft: 20,
   },
   speakerName: {
-    paddingTop: 10,
+    paddingTop: 20,
     fontSize: 25,
     fontWeight: '600',
     paddingBottom: 15,
@@ -41,6 +44,9 @@ const styles = StyleSheet.create({
   speakerBio: {
     fontSize: 17,
     lineHeight: 30,
+  },
+  aboutSpeakerContainer: {
+    alignItems: 'center',
   },
 });
 

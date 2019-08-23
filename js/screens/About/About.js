@@ -5,9 +5,15 @@ import SingleConduct from '../../components/SingleConduct';
 
 const About = ({allConducts}) => {
   return (
-    <ScrollView>
+    <ScrollView style={styles.aboutPage}>
+      <View style={styles.aboutImageContainer}>
+        <Image
+          style={styles.aboutImage}
+          source={require('../../assets/images/r10_logo.png')}
+        />
+      </View>
       <View>
-        <Text>
+        <Text style={styles.text}>
           R10 is a conference that focuses on just about any topic related to
           dev.
         </Text>
@@ -15,7 +21,7 @@ const About = ({allConducts}) => {
 
       <View>
         <Text style={styles.aboutTitle}>Date & Venue</Text>
-        <Text>
+        <Text style={styles.text}>
           The R10 Conferencewill take place on Tuesday, June 27, 2020 in
           Vancouver,BC.
         </Text>

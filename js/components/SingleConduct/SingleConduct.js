@@ -6,8 +6,8 @@ const SingleConduct = ({conduct}) => {
   return (
     <View>
       <View>
-        <Text>{conduct.title}</Text>
-        <Text>{conduct.description}</Text>
+        <Text style={styles.conductTitle}>{conduct.title}</Text>
+        <Text style={styles.conductDescription}>{conduct.description}</Text>
       </View>
     </View>
   );

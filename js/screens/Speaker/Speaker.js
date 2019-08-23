@@ -18,13 +18,18 @@ const Speaker = ({navigation, speaker}) => {
               onPress={() => navigation.goBack()}
             />
           </TouchableOpacity>
-          <Text style={styles.aboutSpeaker}>About the Speaker</Text>
+          <View style={styles.aboutSpeakerContainer}>
+            <Text style={styles.aboutSpeaker}>About the Speaker</Text>
+          </View>
         </View>
         <ScrollView>
           <View style={styles.speakerBox}>
             <Image style={styles.speakerImage} source={{uri: speaker.image}} />
             <Text style={styles.speakerName}>{speaker.name}</Text>
             <Text style={styles.speakerBio}>{speaker.bio}</Text>
+            <TouchableOpacity onPress={() => Linking.openURL(speaker.url)}>
+              <Text>Read More on Wikipedia</Text>
+            </TouchableOpacity>
           </View>
         </ScrollView>
       </View>
