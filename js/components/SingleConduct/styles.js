@@ -3,12 +3,12 @@ const styles = StyleSheet.create({
   conductTitle: {
     paddingBottom: 20,
     color: '#9963ea',
-    fontSize: 18,
+    fontSize: 20,
+    fontWeight: '500',
+    letterSpacing: 0.7,
   },
-  conductDescription: {
-    fontSize: 17,
-    lineHeight: 25,
-    paddingBottom: 20,
+  titleBlock: {
+    flexDirection: 'row',
   },
 });
 

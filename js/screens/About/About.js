@@ -22,7 +22,7 @@ const About = ({allConducts}) => {
       <View>
         <Text style={styles.aboutTitle}>Date & Venue</Text>
         <Text style={styles.text}>
-          The R10 Conferencewill take place on Tuesday, June 27, 2020 in
+          The R10 Conference will take place on Tuesday, June 27, 2020 in
           Vancouver,BC.
         </Text>
       </View>
