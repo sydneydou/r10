@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
   },
   speakerTop: {
     flexDirection: 'row',
-    marginTop: 24,
+    marginTop: 45,
     paddingBottom: 20,
     paddingLeft: 20,
   },
@@ -58,7 +58,8 @@ const styles = StyleSheet.create({
     borderRadius: 25,
     height: 45,
     justifyContent: 'center',
-    marginTop: 20,
+    marginTop: 25,
+    marginBottom: 20,
   },
   readMoreText: {
     color: 'white',
