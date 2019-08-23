@@ -1,5 +1,12 @@
 import React from 'react';
-import {Text, View, Modal, TouchableOpacity, Image} from 'react-native';
+import {
+  Text,
+  View,
+  Modal,
+  TouchableOpacity,
+  Image,
+  Linking,
+} from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import {withNavigation, SafeAreaView} from 'react-navigation';
 import styles from './styles';
@@ -27,8 +34,10 @@ const Speaker = ({navigation, speaker}) => {
             <Image style={styles.speakerImage} source={{uri: speaker.image}} />
             <Text style={styles.speakerName}>{speaker.name}</Text>
             <Text style={styles.speakerBio}>{speaker.bio}</Text>
-            <TouchableOpacity onPress={() => Linking.openURL(speaker.url)}>
-              <Text>Read More on Wikipedia</Text>
+            <TouchableOpacity
+              style={styles.readMoreButton}
+              onPress={() => Linking.openURL(speaker.url)}>
+              <Text style={styles.readMoreText}>Read More on Wikipedia</Text>
             </TouchableOpacity>
           </View>
         </ScrollView>

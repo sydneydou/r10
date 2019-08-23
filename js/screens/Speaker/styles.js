@@ -23,15 +23,17 @@ const styles = StyleSheet.create({
   },
   goBack: {
     color: 'white',
+    paddingRight: 70,
   },
   aboutSpeaker: {
     color: 'white',
     textAlign: 'center',
     fontSize: 20,
+    fontWeight: '600',
   },
   speakerTop: {
     flexDirection: 'row',
-    paddingTop: 25,
+    marginTop: 24,
     paddingBottom: 20,
     paddingLeft: 20,
   },
@@ -46,7 +48,23 @@ const styles = StyleSheet.create({
     lineHeight: 30,
   },
   aboutSpeakerContainer: {
-    alignItems: 'center',
+    alignContent: 'center',
+    justifyContent: 'center',
+  },
+  readMoreButton: {
+    backgroundColor: '#9963ea',
+    width: 230,
+    borderColor: 'white',
+    borderRadius: 25,
+    height: 45,
+    justifyContent: 'center',
+    marginTop: 20,
+  },
+  readMoreText: {
+    color: 'white',
+    fontSize: 20,
+    textAlign: 'center',
+    paddingBottom: 10,
   },
 });
 
