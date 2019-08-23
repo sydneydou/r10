@@ -44,10 +44,9 @@ const ListSession = ({sessions, navigation, removeFave, isFaved, faveIds}) => {
         renderSectionHeader={({section: {title}}) => (
           <View style={styles.sessionTimeBlock}>
             <Text style={styles.sessionTime}>
-              {new Date(title).toLocaleTimeString([], {
-                hour: '2-digit',
-                minute: '2-digit',
-              })}
+              {moment(title)
+                .format('hh:mm a')
+                .toUpperCase()}
             </Text>
           </View>
         )}
