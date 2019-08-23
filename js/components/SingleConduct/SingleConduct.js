@@ -15,18 +15,6 @@ class SingleConduct extends React.Component {
     };
   }
 
-  // toggleDescription = () => {
-  //   if (!this.state.collapse) {
-  //     this.setState({
-  //       collapse: true,
-  //     });
-  //   } else {
-  //     this.setState({
-  //       collapse: false,
-  //     });
-  //   }
-  // };
-
   animate = () => {
     this.spinValue.setValue(0);
     Animated.timing(this.spinValue, {

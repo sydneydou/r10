@@ -28,15 +28,9 @@ const Session = ({
     removeFave(sessionId);
   };
 
-  // {moment(singleSession.startTime)
-  //   .format('hh:mm a')
-  //   .toUpperCase()}
-
   const time = moment(singleSession.startTime)
     .format('hh:mm a')
     .toUpperCase();
-  const currentSpeaker = singleSession.speaker;
-  const imageurl = singleSession.speaker.url;
   let IconComponent = Ionicons;
 
   return (

@@ -3,6 +3,7 @@ import {Text, View} from 'react-native';
 import ListSession from '../../components/ListSession';
 import {formatSessionData} from '../../lib/helper';
 import styles from './styles';
+import CustomText from '../../components/CustomText';
 
 const Faves = ({allSessions, removeFave, faveIds}) => {
   const filteredSession = formatSessionData(allSessions);
@@ -17,7 +18,9 @@ const Faves = ({allSessions, removeFave, faveIds}) => {
         />
       ) : (
         <View style={styles.noFaveTextContainer}>
-          <Text style={styles.noFaveText}>You have no faves yet!</Text>
+          <CustomText style={styles.noFaveText}>
+            You have no faves yet!
+          </CustomText>
         </View>
       )}
     </View>

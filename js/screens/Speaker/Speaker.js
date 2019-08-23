@@ -8,7 +8,7 @@ import {
   Linking,
 } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import {withNavigation, SafeAreaView} from 'react-navigation';
+import {withNavigation} from 'react-navigation';
 import styles from './styles';
 import {ScrollView} from 'react-native-gesture-handler';
 import LinearGradient from 'react-native-linear-gradient';
