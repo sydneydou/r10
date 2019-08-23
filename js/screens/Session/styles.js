@@ -2,13 +2,12 @@ import {typography} from '../../config/styles';
 import {StyleSheet} from 'react-native';
 const {fontMain, fontMainLight} = typography;
 const styles = StyleSheet.create({
-  title: {
-    fontFamily: fontMain,
-  },
+  title: {},
   sessionPage: {
     paddingLeft: 20,
     paddingTop: 20,
     paddingRight: 10,
+    fontFamily: fontMain,
   },
   sessionLocation: {
     color: '#999999',

@@ -12,7 +12,7 @@ import styles from './styles';
 import {withNavigation} from 'react-navigation';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import LinearGradient from 'react-native-linear-gradient';
-
+import moment from 'moment';
 const Session = ({
   singleSession,
   addFave,
@@ -28,10 +28,13 @@ const Session = ({
     removeFave(sessionId);
   };
 
-  const time = new Date(singleSession.startTime).toLocaleTimeString([], {
-    hour: '2-digit',
-    minute: '2-digit',
-  });
+  // {moment(singleSession.startTime)
+  //   .format('hh:mm a')
+  //   .toUpperCase()}
+
+  const time = moment(singleSession.startTime)
+    .format('hh:mm a')
+    .toUpperCase();
   const currentSpeaker = singleSession.speaker;
   const imageurl = singleSession.speaker.url;
   let IconComponent = Ionicons;
