@@ -65,17 +65,21 @@ const Session = ({
         </View>
       </TouchableHighlight>
       {!isFaved ? (
-        <TouchableOpacity
-          onPress={() => addNewFave(singleSession.id)}
-          style={styles.faveButton}>
-          <Text style={styles.faveButtonText}>Add to Faves</Text>
-        </TouchableOpacity>
+        <View style={styles.faveButtonBlock}>
+          <TouchableOpacity
+            onPress={() => addNewFave(singleSession.id)}
+            style={styles.faveButton}>
+            <Text style={styles.faveButtonText}>Add to Faves</Text>
+          </TouchableOpacity>
+        </View>
       ) : (
-        <TouchableOpacity
-          onPress={() => removeNewFave(singleSession.id)}
-          style={styles.faveButton}>
-          <Text style={styles.faveButtonText}>Remove to Faves</Text>
-        </TouchableOpacity>
+        <View style={styles.faveButtonBlock}>
+          <TouchableOpacity
+            onPress={() => removeNewFave(singleSession.id)}
+            style={styles.faveButton}>
+            <Text style={styles.faveButtonText}>Remove from Faves</Text>
+          </TouchableOpacity>
+        </View>
       )}
     </View>
   );

@@ -10,6 +10,7 @@ import {
 import styles from './styles';
 import {withNavigation} from 'react-navigation';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import moment from 'moment';
 
 const ListSession = ({sessions, navigation, removeFave, isFaved, faveIds}) => {
   let IconComponent = Ionicons;
@@ -41,12 +42,14 @@ const ListSession = ({sessions, navigation, removeFave, isFaved, faveIds}) => {
           </TouchableHighlight>
         )}
         renderSectionHeader={({section: {title}}) => (
-          <Text style={styles.sessionTime}>
-            {new Date(title).toLocaleTimeString([], {
-              hour: '2-digit',
-              minute: '2-digit',
-            })}
-          </Text>
+          <View style={styles.sessionTimeBlock}>
+            <Text style={styles.sessionTime}>
+              {new Date(title).toLocaleTimeString([], {
+                hour: '2-digit',
+                minute: '2-digit',
+              })}
+            </Text>
+          </View>
         )}
         sections={sessions}
       />

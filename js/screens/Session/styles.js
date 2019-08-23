@@ -14,22 +14,23 @@ const styles = StyleSheet.create({
     color: '#999999',
     fontSize: 16,
     fontWeight: '600',
-    paddingBottom: 10,
+    paddingBottom: 13,
   },
   sessionTitle: {
-    fontSize: 25,
+    fontSize: 30,
     fontWeight: '500',
-    paddingBottom: 10,
+    paddingBottom: 13,
   },
   sessionTime: {
     color: '#cf392a',
     fontWeight: '500',
-    paddingBottom: 10,
+    paddingBottom: 12,
   },
   sessionDescription: {
     fontSize: 20,
     fontWeight: '400',
     paddingBottom: 20,
+    lineHeight: 30,
   },
   sessionSpeakerName: {
     fontSize: 17,
@@ -50,14 +51,18 @@ const styles = StyleSheet.create({
   },
   faveButton: {
     backgroundColor: '#9963ea',
-    width: 180,
+    width: 210,
     borderColor: 'white',
     borderRadius: 25,
-    paddingTop: 20,
+    height: 50,
+    justifyContent: 'center',
+  },
+  faveButtonBlock: {
     textAlign: 'center',
     marginTop: 30,
     marginRight: 60,
     marginLeft: 60,
+    alignItems: 'center',
   },
   faveBlock: {
     flexDirection: 'row',

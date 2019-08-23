@@ -3,6 +3,8 @@ import {StyleSheet} from 'react-native';
 const styles = StyleSheet.create({
   sessionTime: {
     fontWeight: 'bold',
+  },
+  sessionTimeBlock: {
     backgroundColor: '#e6e6e6',
     paddingLeft: 20,
     height: 25,
