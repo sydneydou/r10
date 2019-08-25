@@ -18,9 +18,7 @@ const Faves = ({allSessions, removeFave, faveIds}) => {
         />
       ) : (
         <View style={styles.noFaveTextContainer}>
-          <CustomText style={styles.noFaveText}>
-            You have no faves yet!
-          </CustomText>
+          <Text style={styles.noFaveText}>You have no faves yet!</Text>
         </View>
       )}
     </View>

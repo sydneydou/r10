@@ -1,4 +1,6 @@
 import {StyleSheet} from 'react-native';
+import {typography} from '../../config/styles';
+
 const styles = StyleSheet.create({
   conductTitle: {
     paddingBottom: 20,
@@ -6,6 +8,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: '500',
     letterSpacing: 0.7,
+    fontFamily: typography.fontMain,
   },
   titleBlock: {
     flexDirection: 'row',

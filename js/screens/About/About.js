@@ -2,6 +2,7 @@ import React from 'react';
 import {ScrollView, Text, Image, View} from 'react-native';
 import styles from './styles';
 import SingleConduct from '../../components/SingleConduct';
+import CustomText from '../../components/CustomText';
 
 const About = ({allConducts}) => {
   return (

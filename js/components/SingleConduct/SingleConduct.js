@@ -1,6 +1,7 @@
 import React from 'react';
 import {Text, View, TouchableOpacity, Animated, Easing} from 'react-native';
 import styles from './styles';
+import {typography} from '../../config/styles';
 
 class SingleConduct extends React.Component {
   constructor(props) {
@@ -49,12 +50,14 @@ class SingleConduct extends React.Component {
       fontSize: 17,
       lineHeight: 25,
       paddingBottom: 20,
+      fontFamily: typography.fontMain,
     };
     const hideDescription = {
       display: 'none',
       fontSize: 17,
       lineHeight: 25,
       paddingBottom: 20,
+      fontFamily: typography.fontMain,
     };
     const {conduct} = this.props;
     return (

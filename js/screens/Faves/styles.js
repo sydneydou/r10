@@ -5,6 +5,7 @@ const styles = StyleSheet.create({
   noFaveText: {
     fontSize: 30,
     fontWeight: '500',
+    fontFamily: typography.fontMain,
   },
   noFaveTextContainer: {
     marginTop: 180,

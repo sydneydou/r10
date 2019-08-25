@@ -1,8 +1,10 @@
 import {StyleSheet} from 'react-native';
+import {typography} from '../../config/styles';
 
 const styles = StyleSheet.create({
   sessionTime: {
     fontWeight: 'bold',
+    fontFamily: typography.fontMain,
   },
   sessionTimeBlock: {
     backgroundColor: '#e6e6e6',
@@ -20,11 +22,13 @@ const styles = StyleSheet.create({
   sessionTitle: {
     fontSize: 17,
     fontWeight: '600',
+    fontFamily: typography.fontMain,
   },
   sessionLocation: {
     color: '#999999',
     fontSize: 15,
     fontWeight: '600',
+    fontFamily: typography.fontMain,
   },
   sessionList: {
     justifyContent: 'space-between',

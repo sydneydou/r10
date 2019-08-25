@@ -13,6 +13,7 @@ import {withNavigation} from 'react-navigation';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import LinearGradient from 'react-native-linear-gradient';
 import moment from 'moment';
+
 const Session = ({
   singleSession,
   addFave,
@@ -23,9 +24,11 @@ const Session = ({
 }) => {
   addNewFave = sessionId => {
     addFave(sessionId);
+    console.log(isFaved);
   };
   removeNewFave = sessionId => {
     removeFave(sessionId);
+    console.log('remove');
   };
 
   const time = moment(singleSession.startTime)
