@@ -3,7 +3,7 @@ import {Text, View} from 'react-native';
 import ListSession from '../../components/ListSession';
 import {formatSessionData} from '../../lib/helper';
 import styles from './styles';
-import CustomText from '../../components/CustomText';
+import PropTypes from 'prop-types';
 
 const Faves = ({allSessions, removeFave, faveIds}) => {
   const filteredSession = formatSessionData(allSessions);
@@ -23,6 +23,12 @@ const Faves = ({allSessions, removeFave, faveIds}) => {
       )}
     </View>
   );
+};
+
+Faves.propTypes = {
+  allSessions: PropTypes.object.isRequired,
+  removeFave: PropTypes.func.isRequired,
+  faveIds: PropTypes.array.isRequired,
 };
 
 export default Faves;

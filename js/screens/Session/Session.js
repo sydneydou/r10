@@ -13,15 +13,9 @@ import {withNavigation} from 'react-navigation';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import LinearGradient from 'react-native-linear-gradient';
 import moment from 'moment';
+import PropTypes from 'prop-types';
 
-const Session = ({
-  singleSession,
-  addFave,
-  removeFave,
-  faveIds,
-  isFaved,
-  navigation,
-}) => {
+const Session = ({singleSession, addFave, removeFave, isFaved, navigation}) => {
   addNewFave = sessionId => {
     addFave(sessionId);
     console.log(isFaved);
@@ -89,6 +83,14 @@ const Session = ({
       </View>
     </View>
   );
+};
+
+Session.propTypes = {
+  singleSession: PropTypes.object.isRequired,
+  addFave: PropTypes.func.isRequired,
+  removeFave: PropTypes.func.isRequired,
+  faveIds: PropTypes.array.isRequired,
+  isFaved: PropTypes.bool.isRequired,
 };
 
 export default withNavigation(Session);

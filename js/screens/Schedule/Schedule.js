@@ -4,6 +4,7 @@ import {formatSessionData} from '../../lib/helper';
 import ListSession from '../../components/ListSession';
 import {withNavigation} from 'react-navigation';
 import styles from './styles';
+import PropTypes from 'prop-types';
 
 const Schedule = ({allSessions, removeFave, faveIds}) => {
   const filteredSession = formatSessionData(allSessions);
@@ -16,6 +17,12 @@ const Schedule = ({allSessions, removeFave, faveIds}) => {
       />
     </View>
   );
+};
+
+Schedule.propTypes = {
+  allSessions: PropTypes.object.isRequired,
+  removeFave: PropTypes.func.isRequired,
+  faveIds: PropTypes.array.isRequired,
 };
 
 export default Schedule;

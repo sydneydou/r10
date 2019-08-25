@@ -12,6 +12,8 @@ import {withNavigation} from 'react-navigation';
 import styles from './styles';
 import {ScrollView} from 'react-native-gesture-handler';
 import LinearGradient from 'react-native-linear-gradient';
+import PropTypes from 'prop-types';
+
 const Speaker = ({navigation, speaker}) => {
   let IconComponent = Ionicons;
   return (
@@ -47,6 +49,10 @@ const Speaker = ({navigation, speaker}) => {
       </ScrollView>
     </View>
   );
+};
+
+Speaker.propTypes = {
+  speaker: PropTypes.object.isRequired,
 };
 
 export default withNavigation(Speaker);

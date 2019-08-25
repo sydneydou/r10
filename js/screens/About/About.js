@@ -2,7 +2,7 @@ import React from 'react';
 import {ScrollView, Text, Image, View} from 'react-native';
 import styles from './styles';
 import SingleConduct from '../../components/SingleConduct';
-import CustomText from '../../components/CustomText';
+import PropTypes from 'prop-types';
 
 const About = ({allConducts}) => {
   return (
@@ -36,6 +36,10 @@ const About = ({allConducts}) => {
       ))}
     </ScrollView>
   );
+};
+
+About.propTypes = {
+  allConducts: PropTypes.object.isRequired,
 };
 
 export default About;
