@@ -1,11 +1,17 @@
-import {StyleSheet} from 'react-native';
+import {StyleSheet, Platform} from 'react-native';
 import {typography} from '../../config/styles';
+
 const styles = StyleSheet.create({
   aboutTitle: {
     fontSize: 27,
     paddingBottom: 20,
     fontWeight: '600',
     fontFamily: typography.fontMain,
+    ...Platform.select({
+      android: {
+        color: '#4d4b46',
+      },
+    }),
   },
   aboutPage: {
     padding: 20,
@@ -26,6 +32,11 @@ const styles = StyleSheet.create({
     lineHeight: 25,
     paddingBottom: 20,
     fontFamily: typography.fontMain,
+    ...Platform.select({
+      android: {
+        color: '#999999',
+      },
+    }),
   },
 });
 

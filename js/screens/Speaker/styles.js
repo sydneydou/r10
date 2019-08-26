@@ -1,5 +1,5 @@
 import {typography} from '../../config/styles';
-import {StyleSheet} from 'react-native';
+import {StyleSheet, Platform} from 'react-native';
 
 const styles = StyleSheet.create({
   speakerImage: {
@@ -31,6 +31,11 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontFamily: typography.fontMain,
     fontWeight: '600',
+    ...Platform.select({
+      android: {
+        color: '#4d4b46',
+      },
+    }),
   },
   speakerTop: {
     flexDirection: 'row',
@@ -44,11 +49,21 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     fontFamily: typography.fontMain,
     paddingBottom: 15,
+    ...Platform.select({
+      android: {
+        color: '#4d4b46',
+      },
+    }),
   },
   speakerBio: {
     fontSize: 17,
     fontFamily: typography.fontMain,
     lineHeight: 30,
+    ...Platform.select({
+      android: {
+        color: '#999999',
+      },
+    }),
   },
   aboutSpeakerContainer: {
     alignContent: 'center',

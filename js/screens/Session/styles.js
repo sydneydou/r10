@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native';
+import {StyleSheet, Platform} from 'react-native';
 import {typography} from '../../config/styles';
 const styles = StyleSheet.create({
   sessionPage: {
@@ -19,6 +19,11 @@ const styles = StyleSheet.create({
     fontWeight: '500',
     paddingBottom: 13,
     fontFamily: typography.fontMain,
+    ...Platform.select({
+      android: {
+        color: '#4d4b46',
+      },
+    }),
   },
   sessionTime: {
     color: '#cf392a',
@@ -31,11 +36,21 @@ const styles = StyleSheet.create({
     paddingBottom: 20,
     lineHeight: 30,
     fontFamily: typography.fontMain,
+    ...Platform.select({
+      android: {
+        color: '#999999',
+      },
+    }),
   },
   sessionSpeakerName: {
     fontSize: 17,
     fontFamily: typography.fontMain,
     fontWeight: '500',
+    ...Platform.select({
+      android: {
+        color: '#4d4b46',
+      },
+    }),
   },
   speakerBlock: {
     flexDirection: 'row',

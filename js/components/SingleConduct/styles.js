@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native';
+import {StyleSheet, Platform} from 'react-native';
 import {typography} from '../../config/styles';
 
 const styles = StyleSheet.create({
@@ -9,6 +9,11 @@ const styles = StyleSheet.create({
     fontWeight: '500',
     letterSpacing: 0.7,
     fontFamily: typography.fontMain,
+    ...Platform.select({
+      android: {
+        color: '#4d4b46',
+      },
+    }),
   },
   titleBlock: {
     flexDirection: 'row',

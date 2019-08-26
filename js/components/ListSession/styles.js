@@ -1,10 +1,15 @@
-import {StyleSheet} from 'react-native';
+import {StyleSheet, Platform} from 'react-native';
 import {typography} from '../../config/styles';
 
 const styles = StyleSheet.create({
   sessionTime: {
     fontWeight: 'bold',
     fontFamily: typography.fontMain,
+    ...Platform.select({
+      android: {
+        color: '#4d4b46',
+      },
+    }),
   },
   sessionTimeBlock: {
     backgroundColor: '#e6e6e6',
@@ -23,6 +28,11 @@ const styles = StyleSheet.create({
     fontSize: 17,
     fontWeight: '600',
     fontFamily: typography.fontMain,
+    ...Platform.select({
+      android: {
+        color: '#4d4b46',
+      },
+    }),
   },
   sessionLocation: {
     color: '#999999',
