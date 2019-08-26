@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
   },
   readMoreButton: {
     backgroundColor: '#9963ea',
-    width: 240,
+    width: 260,
     borderColor: 'white',
     borderRadius: 25,
     height: 45,
