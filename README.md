@@ -4,10 +4,10 @@
 
 Mobile application, for IOS and Android, using React Native for an upcoming developer conference. This application displays a schedule of events and additional information about each session and speaker. It also provides the feature of 'faving' each event, shown with a red heart and displaying the event on the faves page. Additional information, including a dropdown feature displaying the code of conduct for this event.
 
-<!-- ## Screenshots -->
+## Screenshots
 
-<!--
-![alt text](public/vending.png) -->
+![alt text](public/screenshotTwo.png)
+![alt text](public/screenshot.png)
 
 ## Technologies and/or Libraries Used
 
