@@ -18,11 +18,9 @@ import PropTypes from 'prop-types';
 const Session = ({singleSession, addFave, removeFave, isFaved, navigation}) => {
   addNewFave = sessionId => {
     addFave(sessionId);
-    console.log(isFaved);
   };
   removeNewFave = sessionId => {
     removeFave(sessionId);
-    console.log('remove');
   };
 
   const time = moment(singleSession.startTime)

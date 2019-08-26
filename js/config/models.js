@@ -1,4 +1,4 @@
-import {AsyncStorage} from '@react-native-community/async-storage';
+import AsyncStorage from '@react-native-community/async-storage';
 
 export const createFave = async faveId => {
   try {
@@ -25,6 +25,6 @@ export const queryFaves = async () => {
     const values = await AsyncStorage.multiGet(keys);
     return values;
   } catch (error) {
-    return error;
+    throw error;
   }
 };
