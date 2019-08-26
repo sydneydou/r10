@@ -6,8 +6,8 @@ Mobile application, for IOS and Android, using React Native for an upcoming deve
 
 ## Screenshots
 
-![alt text](public/screenshotTwo.png | width=48))
-![alt text](public/screenshot.png | width=48))
+![alt text](public/screenshotTwo.png))
+![alt text](public/screenshot.png)
 
 ## Technologies and/or Libraries Used
 
