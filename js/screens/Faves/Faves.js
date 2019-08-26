@@ -26,7 +26,7 @@ const Faves = ({allSessions, removeFave, faveIds}) => {
 };
 
 Faves.propTypes = {
-  allSessions: PropTypes.object.isRequired,
+  allSessions: PropTypes.array.isRequired,
   removeFave: PropTypes.func.isRequired,
   faveIds: PropTypes.array.isRequired,
 };

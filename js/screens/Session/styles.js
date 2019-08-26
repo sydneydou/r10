@@ -1,23 +1,24 @@
-import {typography} from '../../config/styles';
 import {StyleSheet} from 'react-native';
-const {fontMain, fontMainLight} = typography;
+import {typography} from '../../config/styles';
 const styles = StyleSheet.create({
   sessionPage: {
     paddingLeft: 20,
     paddingTop: 20,
     paddingRight: 10,
-    fontFamily: fontMain,
+    fontFamily: typography.fontMain,
   },
   sessionLocation: {
     color: '#999999',
     fontSize: 16,
     fontWeight: '600',
     paddingBottom: 13,
+    fontFamily: typography.fontMain,
   },
   sessionTitle: {
     fontSize: 30,
     fontWeight: '500',
     paddingBottom: 13,
+    fontFamily: typography.fontMain,
   },
   sessionTime: {
     color: '#cf392a',
@@ -29,9 +30,11 @@ const styles = StyleSheet.create({
     fontWeight: '400',
     paddingBottom: 20,
     lineHeight: 30,
+    fontFamily: typography.fontMain,
   },
   sessionSpeakerName: {
     fontSize: 17,
+    fontFamily: typography.fontMain,
     fontWeight: '500',
   },
   speakerBlock: {
@@ -73,6 +76,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     textAlign: 'center',
     fontWeight: '500',
+    fontFamily: typography.fontMain,
   },
 });
 

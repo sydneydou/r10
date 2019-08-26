@@ -1,6 +1,6 @@
 import {typography} from '../../config/styles';
 import {StyleSheet} from 'react-native';
-const {fontMain, fontMainLight} = typography;
+
 const styles = StyleSheet.create({
   speakerImage: {
     width: 100,
@@ -29,6 +29,7 @@ const styles = StyleSheet.create({
     color: 'white',
     textAlign: 'center',
     fontSize: 20,
+    fontFamily: typography.fontMain,
     fontWeight: '600',
   },
   speakerTop: {
@@ -41,10 +42,12 @@ const styles = StyleSheet.create({
     paddingTop: 20,
     fontSize: 25,
     fontWeight: '600',
+    fontFamily: typography.fontMain,
     paddingBottom: 15,
   },
   speakerBio: {
     fontSize: 17,
+    fontFamily: typography.fontMain,
     lineHeight: 30,
   },
   aboutSpeakerContainer: {
@@ -65,6 +68,7 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: 20,
     textAlign: 'center',
+    fontFamily: typography.fontMain,
     fontWeight: '500',
   },
 });

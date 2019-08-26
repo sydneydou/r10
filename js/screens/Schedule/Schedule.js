@@ -20,7 +20,7 @@ const Schedule = ({allSessions, removeFave, faveIds}) => {
 };
 
 Schedule.propTypes = {
-  allSessions: PropTypes.object.isRequired,
+  allSessions: PropTypes.array.isRequired,
   removeFave: PropTypes.func.isRequired,
   faveIds: PropTypes.array.isRequired,
 };
