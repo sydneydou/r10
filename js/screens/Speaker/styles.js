@@ -31,11 +31,6 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontFamily: typography.fontMain,
     fontWeight: '600',
-    ...Platform.select({
-      android: {
-        color: '#4d4b46',
-      },
-    }),
   },
   speakerTop: {
     flexDirection: 'row',
