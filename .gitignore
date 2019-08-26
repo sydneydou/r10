@@ -40,6 +40,11 @@ yarn-error.log
 buck-out/
 \.buckd/
 *.keystore
+.buckconfig
+.flowconfig
+.gitattributes
+.prettierrc.js
+.watchmanconfig
 
 # fastlane
 #
