@@ -4,6 +4,7 @@ import Schedule from './Schedule';
 import {gql} from 'apollo-boost';
 import {Query} from '@apollo/react-components';
 import FavesContext from '../../context/FavesContext';
+import styles from '../Session/styles';
 
 class ScheduleContainer extends Component {
   constructor(props) {
@@ -37,7 +38,12 @@ class ScheduleContainer extends Component {
               }
             `}>
             {({loading, error, data}) => {
-              if (loading) return <Text>Loading...</Text>;
+              if (loading)
+                return (
+                  <View style={styles.loadingTextContainer}>
+                    <Text style={styles.loadingText}>Loading...</Text>
+                  </View>
+                );
               if (error) return <Text>Error :(</Text>;
 
               if (data)
