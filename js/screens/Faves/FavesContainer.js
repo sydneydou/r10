@@ -38,7 +38,8 @@ class FavesContainer extends Component {
               }
             `}>
             {({loading, error, data}) => {
-              if (loading) return <ActivityIndicator />;
+              if (loading)
+                return <ActivityIndicator size="large" style={styles.loader} />;
               if (error) return <Text>Error :(</Text>;
 
               if (data)

@@ -3,7 +3,7 @@ import {Text, ActivityIndicator} from 'react-native';
 import About from './About';
 import {gql} from 'apollo-boost';
 import {Query} from '@apollo/react-components';
-import styles from '../../components/ListSession/styles';
+import styles from './styles';
 
 class AboutContainer extends React.Component {
   static navigationOptions = {
