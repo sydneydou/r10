@@ -7,10 +7,6 @@ import FavesContext from '../../context/FavesContext';
 import styles from '../Session/styles';
 
 class ScheduleContainer extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
   static navigationOptions = {
     title: 'Schedule',
   };

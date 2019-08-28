@@ -1,7 +1,6 @@
 import React from 'react';
 import {
   Text,
-  ScrollView,
   SectionList,
   View,
   TouchableHighlight,
@@ -23,7 +22,8 @@ const ListSession = ({sessions, navigation, removeFave, isFaved, faveIds}) => {
       <SectionList
         renderItem={({item}) => (
           <TouchableHighlight
-            onPress={() => navigation.navigate('Session', {item})}>
+            onPress={() => navigation.navigate('Session', {item})}
+            underlayColor="rgba(0, 0, 0, 0.3);">
             <View style={styles.sessionContainer}>
               <Text style={styles.sessionTitle}>{item.title}</Text>
               <View style={styles.sessionList}>

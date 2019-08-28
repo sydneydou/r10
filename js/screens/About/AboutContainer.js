@@ -5,10 +5,6 @@ import {gql} from 'apollo-boost';
 import {Query} from '@apollo/react-components';
 
 class AboutContainer extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
   static navigationOptions = {
     title: 'About',
   };

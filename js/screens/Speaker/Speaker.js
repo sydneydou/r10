@@ -1,12 +1,5 @@
 import React from 'react';
-import {
-  Text,
-  View,
-  Modal,
-  TouchableOpacity,
-  Image,
-  Linking,
-} from 'react-native';
+import {Text, View, TouchableOpacity, Image, Linking} from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import {withNavigation} from 'react-navigation';
 import styles from './styles';
