@@ -23,6 +23,9 @@ Clone repository and follow commands below:
 
 ```bash
 yarn install
+cd ios
+pod install
+cd ..
 ```
 
 ### Run IOS
