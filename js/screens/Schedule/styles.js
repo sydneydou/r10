@@ -1,19 +1,10 @@
-import {StyleSheet, Platform} from 'react-native';
-import {typography} from '../../config/styles';
+import {StyleSheet} from 'react-native';
 const styles = StyleSheet.create({
-  loadingText: {
-    fontSize: 30,
-    fontWeight: '500',
-    fontFamily: typography.fontMain,
-    ...Platform.select({
-      android: {
-        color: '#4d4b46',
-      },
-    }),
-  },
-  loadingTextContainer: {
-    marginTop: 180,
-    alignItems: 'center',
+  loader: {
+    flex: 1,
+    justifyContent: 'center',
+    flexDirection: 'row',
+    justifyContent: 'center',
   },
 });
 export default styles;

@@ -11,13 +11,13 @@ const styles = StyleSheet.create({
     color: '#999999',
     fontSize: 16,
     fontWeight: '600',
-    paddingBottom: 13,
+    paddingBottom: 18,
     fontFamily: typography.fontMain,
   },
   sessionTitle: {
     fontSize: 30,
     fontWeight: '500',
-    paddingBottom: 13,
+    paddingBottom: 18,
     fontFamily: typography.fontMain,
     ...Platform.select({
       android: {
@@ -28,12 +28,12 @@ const styles = StyleSheet.create({
   sessionTime: {
     color: '#cf392a',
     fontWeight: '500',
-    paddingBottom: 12,
+    paddingBottom: 18,
   },
   sessionDescription: {
     fontSize: 20,
-    fontWeight: '400',
-    paddingBottom: 20,
+    fontWeight: '300',
+    paddingBottom: 30,
     lineHeight: 30,
     fontFamily: typography.fontMain,
     ...Platform.select({

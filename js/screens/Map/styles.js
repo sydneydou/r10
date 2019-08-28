@@ -3,7 +3,7 @@ import {typography} from '../../config/styles';
 
 const styles = StyleSheet.create({
   noMapText: {
-    fontSize: 25,
+    fontSize: 22,
     fontWeight: '500',
     fontFamily: typography.fontMain,
     ...Platform.select({

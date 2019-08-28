@@ -8,19 +8,15 @@ import PropTypes from 'prop-types';
 const Faves = ({allSessions, removeFave, faveIds}) => {
   const filteredSession = formatSessionData(allSessions);
 
-  return (
-    <View>
-      {filteredSession.length > 0 ? (
-        <ListSession
-          sessions={filteredSession}
-          removeFave={removeFave}
-          faveIds={faveIds}
-        />
-      ) : (
-        <View style={styles.noFaveTextContainer}>
-          <Text style={styles.noFaveText}>You have no faves yet!</Text>
-        </View>
-      )}
+  return filteredSession.length > 0 ? (
+    <ListSession
+      sessions={filteredSession}
+      removeFave={removeFave}
+      faveIds={faveIds}
+    />
+  ) : (
+    <View style={styles.noFaveTextContainer}>
+      <Text style={styles.noFaveText}>You have no faves yet!</Text>
     </View>
   );
 };

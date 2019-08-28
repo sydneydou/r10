@@ -6,7 +6,6 @@ import {
   Image,
   TouchableHighlight,
   Platform,
-  StyleSheet,
 } from 'react-native';
 import styles from './styles';
 import {withNavigation} from 'react-navigation';

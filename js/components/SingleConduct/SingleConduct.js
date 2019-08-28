@@ -51,6 +51,7 @@ class SingleConduct extends React.Component {
       lineHeight: 25,
       paddingBottom: 20,
       fontFamily: typography.fontMain,
+      fontWeight: '200',
     };
     const hideDescription = {
       display: 'none',
@@ -58,6 +59,7 @@ class SingleConduct extends React.Component {
       lineHeight: 25,
       paddingBottom: 20,
       fontFamily: typography.fontMain,
+      fontWeight: '200',
     };
     const {conduct} = this.props;
     return (

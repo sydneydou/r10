@@ -5,7 +5,6 @@ const styles = StyleSheet.create({
   noFaveText: {
     fontSize: 22,
     fontWeight: '500',
-    alignSelf: 'center',
     justifyContent: 'center',
     fontFamily: typography.fontMain,
     ...Platform.select({
@@ -17,7 +16,13 @@ const styles = StyleSheet.create({
   noFaveTextContainer: {
     justifyContent: 'center',
     alignItems: 'center',
-    //flex: 1,
+    flex: 1,
+  },
+  loader: {
+    flex: 1,
+    justifyContent: 'center',
+    flexDirection: 'row',
+    justifyContent: 'center',
   },
 });
 

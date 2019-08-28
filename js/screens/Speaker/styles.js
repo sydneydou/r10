@@ -22,7 +22,6 @@ const styles = StyleSheet.create({
   },
   goBack: {
     color: 'white',
-    paddingRight: 70,
   },
   aboutSpeaker: {
     color: 'white',
@@ -42,7 +41,7 @@ const styles = StyleSheet.create({
     fontSize: 25,
     fontWeight: '600',
     fontFamily: typography.fontMain,
-    paddingBottom: 15,
+    paddingBottom: 20,
     ...Platform.select({
       android: {
         color: '#4d4b46',
@@ -53,6 +52,7 @@ const styles = StyleSheet.create({
     fontSize: 17,
     fontFamily: typography.fontMain,
     lineHeight: 30,
+    fontWeight: '300',
     ...Platform.select({
       android: {
         color: '#999999',
@@ -62,6 +62,7 @@ const styles = StyleSheet.create({
   aboutSpeakerContainer: {
     alignContent: 'center',
     justifyContent: 'center',
+    flex: 1,
   },
   readMoreButton: {
     backgroundColor: '#9963ea',

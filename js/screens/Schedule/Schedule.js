@@ -1,8 +1,7 @@
 import React from 'react';
-import {Text, View, TouchableHighlight} from 'react-native';
+import {View} from 'react-native';
 import {formatSessionData} from '../../lib/helper';
 import ListSession from '../../components/ListSession';
-import {withNavigation} from 'react-navigation';
 import styles from './styles';
 import PropTypes from 'prop-types';
 

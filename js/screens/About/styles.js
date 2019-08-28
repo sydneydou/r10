@@ -31,6 +31,7 @@ const styles = StyleSheet.create({
     fontSize: 17,
     lineHeight: 25,
     paddingBottom: 20,
+    fontWeight: '200',
     fontFamily: typography.fontMain,
     ...Platform.select({
       android: {
@@ -49,6 +50,12 @@ const styles = StyleSheet.create({
     paddingBottom: 40,
     fontFamily: typography.fontMain,
     fontWeight: '100',
+  },
+  loader: {
+    flex: 1,
+    justifyContent: 'center',
+    flexDirection: 'row',
+    justifyContent: 'center',
   },
 });
 

@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, ActivityIndicator} from 'react-native';
 import Schedule from './Schedule';
 import {gql} from 'apollo-boost';
 import {Query} from '@apollo/react-components';
 import FavesContext from '../../context/FavesContext';
-import styles from '../Session/styles';
+import styles from './styles';
 
 class ScheduleContainer extends Component {
   static navigationOptions = {
@@ -35,11 +35,7 @@ class ScheduleContainer extends Component {
             `}>
             {({loading, error, data}) => {
               if (loading)
-                return (
-                  <View style={styles.loadingTextContainer}>
-                    <Text style={styles.loadingText}>Loading...</Text>
-                  </View>
-                );
+                return <ActivityIndicator size="large" style={styles.loader} />;
               if (error) return <Text>Error :(</Text>;
 
               if (data)
