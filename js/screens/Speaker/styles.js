@@ -18,7 +18,6 @@ const styles = StyleSheet.create({
     zIndex: 10,
     borderRadius: 20,
     alignItems: 'center',
-
     padding: 20,
   },
   goBack: {
@@ -69,14 +68,14 @@ const styles = StyleSheet.create({
     width: 260,
     borderColor: 'white',
     borderRadius: 25,
-    height: 45,
+    height: 50,
     justifyContent: 'center',
     marginTop: 25,
     marginBottom: 20,
   },
   readMoreText: {
     color: 'white',
-    fontSize: 20,
+    fontSize: 18,
     textAlign: 'center',
     fontFamily: typography.fontMain,
     fontWeight: '500',

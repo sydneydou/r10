@@ -67,10 +67,10 @@ const styles = StyleSheet.create({
   },
   faveButton: {
     backgroundColor: '#9963ea',
-    width: 210,
+    width: 250,
     borderColor: 'white',
     borderRadius: 25,
-    height: 50,
+    height: 54,
     justifyContent: 'center',
     alignContent: 'center',
   },

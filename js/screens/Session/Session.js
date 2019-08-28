@@ -49,6 +49,7 @@ const Session = ({singleSession, addFave, removeFave, isFaved, navigation}) => {
         </Text>
         <Text style={styles.sessionLocation}>Presented By:</Text>
         <TouchableHighlight
+          underlayColor="rgba(0, 0, 0, 0.2);"
           onPress={() =>
             navigation.navigate('Speaker', {speaker: singleSession.speaker})
           }>
