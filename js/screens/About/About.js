@@ -31,9 +31,16 @@ const About = ({allConducts}) => {
       <View>
         <Text style={styles.aboutTitle}>Code of Conduct</Text>
       </View>
-      {allConducts.map(conduct => (
-        <SingleConduct key={conduct.id} conduct={conduct} />
-      ))}
+      <View style={styles.singleConductContainer}>
+        {allConducts.map(conduct => (
+          <SingleConduct
+            key={conduct.id}
+            conduct={conduct}
+            style={styles.conduct}
+          />
+        ))}
+      </View>
+      <Text style={styles.aboutFooter}>&#9400; RED Academy 2019</Text>
     </ScrollView>
   );
 };

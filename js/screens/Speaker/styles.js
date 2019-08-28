@@ -79,6 +79,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontFamily: typography.fontMain,
     fontWeight: '500',
+    padding: 10,
   },
 });
 

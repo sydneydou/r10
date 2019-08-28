@@ -3,8 +3,10 @@ import {typography} from '../../config/styles';
 
 const styles = StyleSheet.create({
   noFaveText: {
-    fontSize: 30,
+    fontSize: 22,
     fontWeight: '500',
+    alignSelf: 'center',
+    justifyContent: 'center',
     fontFamily: typography.fontMain,
     ...Platform.select({
       android: {
@@ -13,8 +15,9 @@ const styles = StyleSheet.create({
     }),
   },
   noFaveTextContainer: {
-    marginTop: 180,
+    justifyContent: 'center',
     alignItems: 'center',
+    //flex: 1,
   },
 });
 

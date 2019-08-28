@@ -38,6 +38,18 @@ const styles = StyleSheet.create({
       },
     }),
   },
+  singleConductContainer: {
+    paddingBottom: 20,
+    borderBottomColor: '#e6e6e6',
+    borderBottomWidth: 1,
+  },
+  aboutFooter: {
+    fontSize: 20,
+    paddingTop: 20,
+    paddingBottom: 40,
+    fontFamily: typography.fontMain,
+    fontWeight: '100',
+  },
 });
 
 export default styles;

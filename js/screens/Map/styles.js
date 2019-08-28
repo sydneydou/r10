@@ -3,7 +3,7 @@ import {typography} from '../../config/styles';
 
 const styles = StyleSheet.create({
   noMapText: {
-    fontSize: 30,
+    fontSize: 25,
     fontWeight: '500',
     fontFamily: typography.fontMain,
     ...Platform.select({
@@ -13,7 +13,8 @@ const styles = StyleSheet.create({
     }),
   },
   noMapTextContainer: {
-    marginTop: 180,
+    flex: 1,
+    justifyContent: 'center',
     alignItems: 'center',
   },
 });
