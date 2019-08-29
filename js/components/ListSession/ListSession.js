@@ -10,13 +10,15 @@ import styles from './styles';
 import {withNavigation} from 'react-navigation';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import moment from 'moment';
+import PropTypes from 'prop-types';
 
-const ListSession = ({sessions, navigation, removeFave, isFaved, faveIds}) => {
+const ListSession = ({sessions, navigation, removeFave, faveIds}) => {
   let IconComponent = Ionicons;
 
   removeNewFave = sessionId => {
     removeFave(sessionId);
   };
+
   return (
     sessions && (
       <SectionList
@@ -54,6 +56,13 @@ const ListSession = ({sessions, navigation, removeFave, isFaved, faveIds}) => {
       />
     )
   );
+};
+
+ListSession.propTypes = {
+  sessions: PropTypes.array.isRequired,
+  removeFave: PropTypes.func.isRequired,
+  faveIds: PropTypes.array.isRequired,
+  navigation: PropTypes.object.isRequired,
 };
 
 export default withNavigation(ListSession);

@@ -45,7 +45,7 @@ buck-out/
 .gitattributes
 .prettierrc.js
 .watchmanconfig
-.vscode
+
 
 # fastlane
 #

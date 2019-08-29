@@ -2,6 +2,7 @@ import React from 'react';
 import {Text, View, TouchableOpacity, Animated, Easing} from 'react-native';
 import styles from './styles';
 import {typography} from '../../config/styles';
+import PropTypes from 'prop-types';
 
 class SingleConduct extends React.Component {
   constructor(props) {
@@ -86,5 +87,8 @@ class SingleConduct extends React.Component {
     );
   }
 }
+SingleConduct.propTypes = {
+  conduct: PropTypes.object.isRequired,
+};
 
 export default SingleConduct;
